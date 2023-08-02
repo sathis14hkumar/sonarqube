@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     def scannerHome = tool 'sonarqube'
-                    withSonarQubeEnv('Sonarqube') {
+                    withSonarQubeEnv('sonarqube') {
                         dir("/var/lib/jenkins/workspace/son/src") {
                             sh "${scannerHome}/bin/sonar-scanner"
                         }
